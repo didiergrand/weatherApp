@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #707070;
+  --tertiary-color: #272727;
+  --quaternary-color: #f7f7f7;
+  --fontfamily: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--fontfamily);
+  margin: 0;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+}
+
+#form {
+  height: calc(100vh - 80px);
+  padding: 40px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 10fr 100px;
+}
+
+#latestentry {
+  padding: 40px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
+  position: absolute;
+  top: 0;
+  background: var(--primary-color);
+  display: grid;
+  grid-template-rows: 50px auto 100px;
+}
+
+#date {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: -10px;
+}
+
+#temp {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+#temperature {}
+
+#temperature sup {
+  position: absolute;
+}
+
+#feelingoftheday {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+#temp,
+#feelingoftheday,
+#date {
+  line-height: 1.2;
+}
+
+#temperature,
+#feelingoftheday {
+  margin-top: -20px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 0;
+  line-height: 1;
+}
+
+h2{
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-size: 27px;
+}
+
+input,
+textarea,
+button {
+  font-family: var(--fontfamily);
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  background: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+input {
+  letter-spacing: 1px;
+  width: 260px;
+}
+
+textarea {
+  width: calc(100% - 40px);
+  min-height: 100px;
+  height: calc(100% - 60px);
+}
+
+button {
+  width: 260px;
+  background: var(--secondary-color);
+  color: var(--quaternary-color);
+  box-shadow: 2px 4px 5px #444;
+  letter-spacing: 1px;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: var(--secondary-color);
+  font-family: var(--fontfamily);
+}
+@media(min-width:900px) {
+  .headline h1 {
+    font-size: 60px;
+  }
+}
+
+@media(min-width:1200px) {
+  .headline h1 {
+    font-size: 90px;
+  }
+}
+
+@media(min-width:1500px) {
+  .headline h1 {
+    font-size: 120px;
+  }
+}
