@@ -27,27 +27,15 @@ function listening(){
     console.log(`running on localhost: ${port}`);
 };
 
-const weatherData = [];
-
 app.get('/all',getWeatherData)
 
 function getWeatherData(req,res){
-  res.send(weatherData);
+  res.send(projectData);
 }
-
-
-
-app.post('/addWeather', addWeather )
-function addWeather (req, res){
-
-    newEntry = {
-      date: req.body.date,
-      temp: req.body.temp,
-      feelings: req.body.feelings
-    }
-
-   weatherData.push(newEntry)
-   res.send(weatherData)
-   console.log(weatherData)
-
-}
+app.post("/addWeather", (req, res) => {
+  // should post date, temp and content
+  projectData.date = req.body.date;
+  projectData.temp = req.body.temp;
+  projectData.feelings = req.body.feelings;
+  console.log("server ", projectData);
+});
